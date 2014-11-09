@@ -4,11 +4,13 @@ A simple Captcha parsing algorithm developed for VITacademics.
 
 ## Quickstart
 
+Clone the repo: `git clone https://github.com/karthikb351/CaptchaParser.git`.
+
 ### Python Usage
 
 Include the ```CaptchaParser.py``` file in the directory you are working in, else install it globally so you can import it from anywhere.
 
-```python
+```
 from CaptchaParser import CaptchaParser
 
 img=Image.open("captcha.bmp")
