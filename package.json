@@ -1,0 +1,28 @@
+{
+  "name": "CaptchaParser",
+  "version": "0.1.0",
+  "description": "A Captcha Parsing library for VITacademics. Running on Nodejs",
+  "main": "CaptchaParser.js",
+  "dependencies": {
+    "node-bitmap": "~0.0.1",
+    "request": "~2.47.0",
+    "unirest": "~0.2.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karthikb351/CaptchaParser.git"
+  },
+  "keywords": [
+    "captcha",
+    "vitacademics"
+  ],
+  "author": "Karthik Balakrishnan",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/karthikb351/CaptchaParser/issues"
+  }
+}
