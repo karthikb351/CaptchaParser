@@ -10,7 +10,7 @@ Clone the repo: `git clone https://github.com/karthikb351/CaptchaParser.git`.
 
 Include the ```CaptchaParser.py``` file in the directory you are working in, else install it globally so you can import it from anywhere.
 
-```
+```python
 from CaptchaParser import CaptchaParser
 
 img=Image.open("captcha.bmp")
@@ -25,7 +25,7 @@ Still under development.
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/ProntoUsage/issues).
+Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/CaptchaParser/issues).
 
 ## Contributing and License
 
