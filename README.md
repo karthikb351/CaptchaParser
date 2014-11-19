@@ -21,7 +21,18 @@ print captcha
 
 ### Nodejs Usage
 
-Still under development.
+You'll need the ```CaptchaParser.js``` file within the scope of the node environment so you can ```require``` it.
+
+```javascript
+var captcha = require("../CaptchaParser");
+var fs = require("fs");
+var filename = "./index.html";
+var buf = fs.readFileSync("captcha.bmp");
+
+var pixMap = captcha.getPixelMapFromBuffer(buf);
+
+console.log(captcha.getCaptcha(pixMap));
+```
 
 ## Bugs and feature requests
 
