@@ -610,7 +610,28 @@ function sort(sorter, captcha) {
     }
 }
 
+
+module.exports.getPixelMapFromBuffer = function(bitmapBuffer) {
+    console.log(bitmapBuffer);
+    var pixelMap = [];
+    var subArray = [];
+    var row = 0;
+    for (var i = bitmapBuffer.length - (25 * 132), r = 0; i < bitmapBuffer.length; ++i, ++r) {
+        if (Math.floor(r / 132) !== row) {
+            row = Math.floor(r / 132);
+            pixelMap.push(subArray);
+            subArray = [];
+        }
+        subArray.push(bitmapBuffer.readUInt8(i));
+    }
+    pixelMap.push(subArray);
+    pixelMap.reverse();
+    return pixelMap;
+};
+
+
 module.exports.getCaptcha = function(img) {
+
     temp = 0;
     var x, y;
     for (x = 0; x < 25; ++x) {
@@ -643,7 +664,6 @@ module.exports.getCaptcha = function(img) {
                         sorter.push(y);
                         captcha.push(order[l]);
                         f = f + 1;
-                        console.log(order[l]);
                     }
                 }
             }
