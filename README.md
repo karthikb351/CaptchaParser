@@ -26,7 +26,6 @@ You'll need the ```CaptchaParser.js``` file within the scope of the node environ
 ```javascript
 var captcha = require("../CaptchaParser");
 var fs = require("fs");
-var filename = "./index.html";
 var buf = fs.readFileSync("captcha.bmp");
 
 var pixMap = captcha.getPixelMapFromBuffer(buf);
