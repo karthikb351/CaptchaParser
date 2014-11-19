@@ -220,3 +220,6 @@ node_modules
 
 # sftp configuration file
 sftp-config.json
+
+# WebStorm
+.idea/
