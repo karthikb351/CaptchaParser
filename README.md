@@ -33,6 +33,31 @@ var pixMap = captcha.getPixelMapFromBuffer(buf);
 console.log(captcha.getCaptcha(pixMap));
 ```
 
+### Go lang Usage
+
+Dependencies github.com/hotei/bmp
+```go
+package main
+
+import (
+	"CaptchaParser"
+	"fmt"
+	"log"
+	"os"
+)
+
+func main() {
+	reader, err := os.Open("captcha.bmp")
+	if err != nil {
+		log.Fatal("File error")
+	}
+	output := captcha.GetCaptcha(reader)
+	fmt.Println(output)
+}
+
+```
+
+
 ## Bugs and feature requests
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/CaptchaParser/issues).
