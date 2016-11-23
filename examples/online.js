@@ -1,14 +1,14 @@
 unirest = require("unirest");
 captcha = require("../CaptchaParser");
 fs = require("fs");
-var captchaUri = 'https://academics.vit.ac.in/parent/captcha.asp';
+var captchaUri = 'https://vtop.vit.ac.in/parent/captcha.asp';
 
 var onRequest = function (response) {
     if (response.error) {
         console.log('VIT Academics connection failed');
     }
     else {
-    	pixMap = getPixelMapFromBuffer(response.body);
+    	pixMap = captcha.getPixelMapFromBuffer(response.body);
     	fs.writeFileSync("captcha.bmp", response.body);
         console.log(captcha.getCaptcha(pixMap));
     }
