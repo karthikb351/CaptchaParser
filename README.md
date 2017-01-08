@@ -56,7 +56,15 @@ func main() {
 }
 
 ```
-
+### PHP Usage     
+Include the ```CaptchaParser.php``` file in the directory you are working in
+```php
+<?php
+require("CaptchaParser.php");
+$captcha = new CaptchaParser();
+echo $captcha->getCaptcha("captcha.bmp");
+ ?>
+```
 
 ## Bugs and feature requests
 
